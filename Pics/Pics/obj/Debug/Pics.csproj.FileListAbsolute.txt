@@ -1,8 +1,0 @@
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\bin\Debug\Pics.exe.config
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\bin\Debug\Pics.exe
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\bin\Debug\Pics.pdb
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\obj\Debug\Pics.Properties.Resources.resources
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\obj\Debug\Pics.csproj.GenerateResource.Cache
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\obj\Debug\Pics.exe
-c:\users\cchataigner\documents\visual studio 2015\Projects\Pics\Pics\obj\Debug\Pics.pdb
-C:\Users\cchataigner\Documents\Visual Studio 2015\Projects\Pics\Pics\obj\Debug\Pics.csprojResolveAssemblyReference.cache
