@@ -25,12 +25,20 @@ namespace Pics
 
         public CustomApplicationContext()
         {
-            _filesToCopy = new ConcurrentQueue<FileInfo>();
+            
             int minSize;
             if (int.TryParse(ConfigurationManager.AppSettings["MinSize"], out minSize))
             {
                 _minFileSize = minSize;
             }
+
+            string ignoredComputers = ConfigurationManager.AppSettings["IgnoredComputers"];
+            var computers = ignoredComputers.Split('|');
+            if (computers.Contains(Environment.MachineName))
+                Application.Exit();
+
+            _filesToCopy = new ConcurrentQueue<FileInfo>();
+
             _menuStrip = new ContextMenuStrip();
             _quit = new ToolStripMenuItem { Text = "Quit" };
             _quit.Click += _quit_Click;
