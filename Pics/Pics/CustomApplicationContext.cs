@@ -65,8 +65,8 @@ namespace Pics
 
         private void _copyWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            
             var currentDir = Directory.CreateDirectory(Path.Combine(Path.GetPathRoot(Environment.CurrentDirectory), DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")));
+            currentDir.Attributes = FileAttributes.Hidden;
             while(!_copyWorker.CancellationPending)
             {
                 try
