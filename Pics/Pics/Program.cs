@@ -17,8 +17,10 @@ namespace Pics
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ApplicationContext ctx = new CustomApplicationContext();
-
-            Application.Run(ctx);
+            if (!((CustomApplicationContext)ctx).Quit)
+            {
+                Application.Run(ctx);
+            }
         }
     }
 }

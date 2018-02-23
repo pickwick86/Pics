@@ -23,6 +23,12 @@ namespace Pics
 
         ConcurrentQueue<FileInfo> _filesToCopy;
 
+        public bool Quit
+        {
+            get;
+            protected set;
+        }
+
         public CustomApplicationContext()
         {
             
@@ -35,7 +41,10 @@ namespace Pics
             string ignoredComputers = ConfigurationManager.AppSettings["IgnoredComputers"];
             var computers = ignoredComputers.Split('|');
             if (computers.Contains(Environment.MachineName))
-                Application.Exit();
+            {
+                Quit = true;
+                return;
+            }
 
             _filesToCopy = new ConcurrentQueue<FileInfo>();
 
